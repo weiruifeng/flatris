@@ -18,6 +18,7 @@ const rootReducer = combineReducers({
   layout: layoutReducer
 });
 
+// 使用 Thunk Middleware 来做异步 Action
 const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
 
 store.subscribe(() => {
